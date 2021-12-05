@@ -1,12 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
 PPRINT = binary_tree_print.c
+CRNODE = 0-*_node.c # Create node
+INRGHT = 2-*_right.c # Insert right
+INLFT = 1-*_left.c # Insert left
 
 0: $(PPRINT)
 	$(CC) $(CFLAGS) $(PPRINT) 0-*.c -o 0-node
 
 1: $(PPRINT)
-	$(CC) $(CFLAGS) $(PPRINT) 1-*.c 0-*_node.c -o 1-left
+	$(CC) $(CFLAGS) $(PPRINT) 1-*.c $(CRNODE) -o 1-left
 
 2: $(PPRINT)
-	$(CC) $(CFLAGS) $(PPRINT) 2-*.c 0-*_node.c -o 2-right
+	$(CC) $(CFLAGS) $(PPRINT) 2-*.c $(CRNODE) -o 2-right
+
+3: $(PPRINT)
+	$(CC) $(CFLAGS) $(PPRINT) 3-*.c $(CRNODE) $(INRGHT) -o 3-del
