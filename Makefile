@@ -32,6 +32,9 @@ INLFT = 1-*_left.c # Insert left
 8: $(PPRINT)
 	$(CC) $(CFLAGS) $(PPRINT) 8-*.c $(CRNODE) -o 8-post
 
+9: $(PPRINT)
+	$(CC) $(CFLAGS) $(PPRINT) 9-*.c $(CRNODE) $(INRGHT) -o 9-height
+
 betty:
 	echo "Enter task number: "
 	@(read arg; arg="$$arg-*.c" && betty $$arg);
