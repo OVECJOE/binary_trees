@@ -20,6 +20,9 @@ INLFT = 1-*_left.c # Insert left
 4: $(PPRINT)
 	$(CC) $(CFLAGS) $(PPRINT) 4-*.c $(CRNODE) $(INRGHT) -o 4-leaf
 
+5: $(PPRINT)
+	$(CC) $(CFLAGS) $(PPRINT) 5-*.c $(CRNODE) $(INRGHT) -o 5-root
+
 betty:
 	echo "Enter task number: "
 	@(read arg; arg="$$arg-*.c" && betty $$arg);
