@@ -26,10 +26,10 @@ void number_of_leaves(const binary_tree_t *tree, size_t *count)
 {
 	if (tree == NULL)
 		return;
-	
+
 	if (tree->left == NULL && tree->right == NULL)
 		(*count)++;
-	
+
 	number_of_leaves(tree->left, count);
 	number_of_leaves(tree->right, count);
 }
