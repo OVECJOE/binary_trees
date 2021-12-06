@@ -34,5 +34,7 @@ size_t binary_tree_height(const binary_tree_t *tree);
 void node_height(const binary_tree_t *tree, size_t n, size_t *height);
 size_t binary_tree_depth(const binary_tree_t *tree);
 size_t binary_tree_size(const binary_tree_t *tree);
+size_t binary_tree_leaves(const binary_tree_t *tree);
+void number_of_leaves(const binary_tree_t *tree, size_t *count);
 
 #endif /* _BINARY_TREES_H_ */
